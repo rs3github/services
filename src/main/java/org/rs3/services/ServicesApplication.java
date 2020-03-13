@@ -8,10 +8,17 @@ import org.springframework.boot.Banner.Mode;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.core.env.Environment;
 
 @SpringBootApplication
-public class ServicesApplication {
+public class ServicesApplication extends SpringBootServletInitializer {
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(ServicesApplication.class);
+	}
 
 	public static void main(String[] args) {
 		SpringApplication springApp = new SpringApplication(ServicesApplication.class);
