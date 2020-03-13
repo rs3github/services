@@ -13,6 +13,6 @@ public class HelloService {
 
 	public String getGreeting(String msg) {
 		// TODO Auto-generated method stub
-		return "CHANGED TO Service..." + msg+" WHAT A HELL!!!!!!!";
+		return "<h1>NEW SERVICE  " + msg+" </h1><p>WHAT A HELL!!!!!!!</p>";
 	}
 }
